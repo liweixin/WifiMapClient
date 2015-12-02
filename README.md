@@ -3,7 +3,9 @@
 用于展示用户附近的Wifi地点和详细信息
 
 ##平台
-android
+*　android
+*　minSdkVersion 14
+×  targetSdkVersion 23
 
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
@@ -90,3 +92,5 @@ BaiduMapSdk,Volley,Gson.
 测试可以用chrome插件postman, 或者直接浏览器访问然后格式化json http://www.bejson.com/
 * 程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
 申请地址：http://lbsyun.baidu.com/apiconsole/key
+* 目前只在小米2S上测试没有问题，如果在手机上测试时发现任何BUG欢迎直接在isuue中提交或和我联系
+* Contact me at qq627632598 or email
