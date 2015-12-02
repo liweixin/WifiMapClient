@@ -19,8 +19,8 @@ BaiduMapSdk,Volley,Gson.
 返回格式均为json，采用GET请求数据  <br>
 
 ####1.返回附近WIFI的位置信息
-*地址：http://serverIp:port/getWifiLatLng  <br>
-*示例：http://202.120.36.190:8090/getWifiLatLng  <br>
+* 地址：http://serverIp:port/getWifiLatLng  <br>
+* 示例：http://202.120.36.190:8090/getWifiLatLng  <br>
 ```
 {
     "count": 5,
@@ -50,6 +50,8 @@ BaiduMapSdk,Volley,Gson.
 ```
 
 ####2.查询指定位置的Wifi信息
-*地址：http://serverIp:port/getWifiInfos/Latitude=?Longtitude=?  <br>
-*?处分别以需要查询的经纬度代替。  <br>
-*示例：http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
+* 地址：http://serverIp:port/getWifiInfos/Latitude=?Longtitude=?  <br>
+* ?处分别以需要查询的经纬度代替。  <br>
+* 示例：http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
+```
+
