@@ -86,11 +86,18 @@ BaiduMapSdk,Volley,Gson.
     ]
 }
 ```
+*  如果所查询的位置数据库中没有对应的Wifi信息，返回值如下：
+```
+{
+    "count": 0,
+    "wifiInfos": []
+}
+```
 
 ##Hint
-* server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
+*  server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
 测试可以用chrome插件postman, 或者直接浏览器访问然后格式化json http://www.bejson.com/
-* 程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
+*  程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
 申请地址：http://lbsyun.baidu.com/apiconsole/key
-* 目前只在小米2S上测试没有问题，如果在手机上测试时发现任何BUG欢迎直接在isuue中提交或和我联系
-* Contact me at qq627632598 or email
+*  目前只在小米2S上测试没有问题，如果在手机上测试时发现任何BUG欢迎直接在isuue中提交或和我联系
+*  Contact me at qq627632598 or email
