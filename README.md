@@ -15,7 +15,8 @@ BaiduMapSdk,Volley,Gson.
 目前采用测试端口8090.
 
 ##相关API
-格式：http://serverIp:port/
+格式：http://serverIp:port/  <br>
+返回格式均为json，采用GET请求数据  <br>
 
 ####1.返回附近WIFI的位置信息
 地址：http://serverIp:port/getWifiLatLng  <br>
