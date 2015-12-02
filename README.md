@@ -1,17 +1,23 @@
 # WifiMapClient
 ##Wifi地图
 用于展示用户附近的Wifi地点和详细信息
+
 ##平台
 android
+
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
+
 ##serverIp
 暂定为202.120.36.190.
+
 ##port
 目前采用测试端口8090.
+
 ##相关API
 格式：http://serverIp:port/
-####返回附近WIFI的位置信息
+
+####1.返回附近WIFI的位置信息
 地址：http://serverIp:port/getWifiLatLng  <br>
 示例：http://202.120.36.190:8090/getWifiLatLng  <br>
 ```
@@ -42,7 +48,7 @@ BaiduMapSdk,Volley,Gson.
 }
 ```
 
-####查询指定位置的Wifi信息
+####2.查询指定位置的Wifi信息
 地址：http://serverIp:port/getWifiInfos/Latitude=?Longtitude=?  <br>
 ?处分别以需要查询的经纬度代替。  <br>
 示例：http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
