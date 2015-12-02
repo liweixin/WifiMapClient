@@ -3,9 +3,9 @@
 用于展示用户附近的Wifi地点和详细信息
 
 ##平台
-*　android
-*　minSdkVersion 14
-×  targetSdkVersion 23
+*  android
+*  minSdkVersion 14
+*  targetSdkVersion 23
 
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
