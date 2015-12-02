@@ -10,8 +10,9 @@ BaiduMapSdk,Volley,Gson.
 ##port
 目前采用测试端口8080.
 ##相关API
+####返回附近WIFI的位置信息
 地址：http://serverIp:port/getWifiLatLng  <br>
-调用GET方法返回附近WIFI的位置信息，以JSON格式返回。  <br>
+示例：  <br>
 ```
 {
     "count": 5,
@@ -39,3 +40,6 @@ BaiduMapSdk,Volley,Gson.
     ]
 }
 ```
+
+####返回指定位置的Wifi信息
+http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
