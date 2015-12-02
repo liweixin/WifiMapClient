@@ -54,4 +54,33 @@ BaiduMapSdk,Volley,Gson.
 * ?处分别以需要查询的经纬度代替。  <br>
 * 示例：http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
 ```
-
+{
+    "count": 4,
+    "wifiInfos": [
+        {
+            "signals": 89,
+            "security": "[ESS]",
+            "ssid": "CMCC-WEB",
+            "bssid": "00:11:b5:25:00:32"
+        },
+        {
+            "signals": 77,
+            "security": "[ESS]",
+            "ssid": "CMCC-WEB",
+            "bssid": "00:11:b5:25:14:40"
+        },
+        {
+            "signals": 89,
+            "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS]",
+            "ssid": "Doubi323",
+            "bssid": "9c:21:6a:14:28:d2"
+        },
+        {
+            "signals": 89,
+            "security": "[WPA2-PSK-CCMP][ESS]",
+            "ssid": "xskz",
+            "bssid": "e2:df:9a:96:45:a7"
+        }
+    ]
+}
+```
