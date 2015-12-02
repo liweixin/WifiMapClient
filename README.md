@@ -12,7 +12,7 @@ BaiduMapSdk,Volley,Gson.
 ##相关API
 地址：http://serverIp:port/getWifiLatLng  <br>
 调用GET方法返回附近WIFI的位置信息，以JSON格式返回。  <br>
-···
+```
 {
     "count": 5,
     "location": [
