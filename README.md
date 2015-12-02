@@ -88,5 +88,5 @@ BaiduMapSdk,Volley,Gson.
 ##Hint
 * server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
 测试可以用chrome插件postman, 或者直接浏览器访问然后格式化json http://www.bejson.com/
-* 程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需要重新注册开发者帐号并且重新申请AK码  <br>
+* 程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
 申请地址：http://lbsyun.baidu.com/apiconsole/key
