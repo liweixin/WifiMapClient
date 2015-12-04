@@ -7,6 +7,9 @@
 *  minSdkVersion 14
 *  targetSdkVersion 23
 
+##截图
+
+
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
 
