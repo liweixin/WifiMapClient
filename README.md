@@ -8,7 +8,7 @@
 *  targetSdkVersion 23
 
 ##截图
-https://github.com/liweixin/WifiMapClient/row/master/screenshot/1.jpg
+![](https://github.com/liweixin/WifiMapClient/row/master/screenshot/1.jpg)
 
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
