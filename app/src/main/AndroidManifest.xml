@@ -22,7 +22,9 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="6XEr8gUqyYPGxqG5mtULDPrq" />
+            android:value="AcH1G2LxBF0fPKU16H332Kfd" />
+        <!-- my debug key 6XEr8gUqyYPGxqG5mtULDPrq -->
+        <!-- my released key 6XEr8gUqyYPGxqG5mtULDPrq -->
 
         <activity
             android:name=".MainActivity"

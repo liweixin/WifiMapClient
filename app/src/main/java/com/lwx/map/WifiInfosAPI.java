@@ -42,6 +42,7 @@ public class WifiInfosAPI {
         private String security;
         private String ssid;
         private String bssid;
+        private String timeString;
 
         public void setSignals(int signals) {
             this.signals = signals;
@@ -74,5 +75,7 @@ public class WifiInfosAPI {
         public String getBssid() {
             return bssid;
         }
+
+        public String getTimeString() { return timeString; }
     }
 }

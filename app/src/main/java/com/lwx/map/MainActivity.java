@@ -49,7 +49,8 @@ import java.util.List;
 /**
  * Created by lwx on 2015/11/29.
  */
-public class MainActivity extends Activity implements BaiduMap.OnMarkerClickListener, BaiduMap.OnMapClickListener, BaiduMap.OnMapLongClickListener, BaiduMap.OnMapTouchListener{
+public class MainActivity extends Activity implements BaiduMap.OnMarkerClickListener,
+        BaiduMap.OnMapClickListener, BaiduMap.OnMapLongClickListener, BaiduMap.OnMapTouchListener{
 
     MapView mMapView = null;
     BaiduMap mBaiduMap = null;
@@ -180,6 +181,7 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
                 diolog.setMessage("Bssid:" + wifiInfo.getBssid()
                         + "\nSecurity:" + wifiInfo.getSecurity()
                         + "\nSignal:" + wifiInfo.getSignal()
+                        + "\n添加时间:" + wifiInfo.getTimeString()
                         + "\n安全性:未知");
                 diolog.setCancelable(true);
                 diolog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -213,7 +215,7 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
                         wifiInfos.clear();
                         for(int i=0; i<response.getCount(); i++){
                             WifiInfosAPI.WifiInfosEntity entity = response.getWifiInfos().get(i);
-                            wifiInfos.add(new WifiInfo(entity.getBssid(), entity.getSsid(), entity.getSecurity(), entity.getSignals()));
+                            wifiInfos.add(new WifiInfo(entity.getBssid(), entity.getSsid(), entity.getSecurity(), entity.getTimeString(), entity.getSignals()));
                         }
                         setAdapter();
                     }
@@ -224,18 +226,6 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
             }
         });
         mQueue.add(gsonRequest);
-        /*WifiInfo wifiInfo = new WifiInfo("00:11:22:33:44:55", "TF-PC", "[ESS]", 78, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);
-        wifiInfo = new WifiInfo("11:11:22:33:44:55", "CMCC-EDU", "[ESS]", 65, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);
-        wifiInfo = new WifiInfo("22:11:22:33:44:55", "SJTU", "[ESS]", 72, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);
-        wifiInfo = new WifiInfo("33:11:22:33:44:55", "SJTU-WEB", "[ESS]", 87, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);
-        wifiInfo = new WifiInfo("44:11:22:33:44:55", "SJTU-DORM", "[ESS]", 81, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);
-        wifiInfo = new WifiInfo("55:11:22:33:44:55", "China-Union", "[ESS]", 70, 121.442426, 31.030801);
-        wifiInfos.add(wifiInfo);*/
     }
 
     private void setListViewSize(WifiInfoAdapter listAdapter, ListView listView){
@@ -296,6 +286,7 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
         //在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
         mMapView.onPause();
     }
+
     private void addMark(double latitude, double longtitude) {
         //定义Maker坐标点
         LatLng point = new LatLng(latitude, longtitude);
