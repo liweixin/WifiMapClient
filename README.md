@@ -8,9 +8,9 @@
 *  targetSdkVersion 23
 
 ##截图
-![附近wifi位置](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/1.jpg)
-![某处wifi列表](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/2.jpg)
-![详细wifi信息](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/3.jpg)
+![附近wifi位置](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/small_1.jpg)
+![某处wifi列表](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/small_2.jpg)
+![详细wifi信息](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/samll_3.jpg)
 
 ##使用的第三方类库
 BaiduMapSdk,Volley,Gson.
