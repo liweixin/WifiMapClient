@@ -115,7 +115,7 @@
 可以在AndroidManifest.xml中的meta-data修改AK码  <br>
 *  SHA1获取方法：略  <br>
 *  格式化Json很好用的网站： http://www.bejson.com/  <br>
-*  把能想到的问题尽可能列出来了，还有什么疑问可以直接问作者（估计都是一些我踩过的坑）  <br>
+*  把能想到的问题尽可能列出来了，还有什么疑问可以直接问作者 -估计都是一些我踩过的坑(´・∀・｀)  <br>
 
 ##Hint
 *  server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
