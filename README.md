@@ -13,9 +13,9 @@
 ![详细wifi信息](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/small_3.jpg)
 
 ##使用的第三方类库
-*BaiduMapSdk：地图接口  <br>
-*Volley：网络处理  <br>
-*Gson：解析Json  <br>
+*  BaiduMapSdk：地图接口  <br>
+*  Volley：网络处理  <br>
+*  Gson：解析Json  <br>
 
 ##serverIp
 202.120.36.190.
@@ -110,11 +110,12 @@
 }
 ```
 ##Debug必看
-*  程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
+*  程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码，否则无法显示地图  <br>
 申请地址：http://lbsyun.baidu.com/apiconsole/key  <br>
 可以在AndroidManifest.xml中的meta-data修改AK码  <br>
-*  SHA1码获取方法：略  <br>
+*  SHA1获取方法：略  <br>
 *  格式化Json很好用的网站： http://www.bejson.com/  <br>
+*  把能想到的问题尽可能列出来了，还有什么疑问可以直接问作者（估计都是一些我踩过的坑）  <br>
 
 ##Hint
 *  server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
