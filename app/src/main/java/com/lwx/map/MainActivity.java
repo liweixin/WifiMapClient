@@ -132,7 +132,7 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
 
     private void addAllMark(){
         mQueue = Volley.newRequestQueue(getApplicationContext());
-        GsonRequest<LocationInfoAPI> gsonRequest = new GsonRequest<LocationInfoAPI>("http://202.120.36.190:8090/getWifiLatLng", LocationInfoAPI.class,
+        GsonRequest<LocationInfoAPI> gsonRequest = new GsonRequest<LocationInfoAPI>("http://202.120.36.190:8080/wifiLatLng", LocationInfoAPI.class,
                 new Response.Listener<LocationInfoAPI>() {
                     @Override
                     public void onResponse(LocationInfoAPI response) {
@@ -202,10 +202,10 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
 
     private void initWifiInfos(LatLng latlng){
         GsonRequest<WifiInfosAPI> gsonRequest =
-                new GsonRequest<WifiInfosAPI>("http://202.120.36.190:8090/getWifiInfos/"
+                new GsonRequest<WifiInfosAPI>("http://202.120.36.190:8080/wifiInfos?"
                         +"Latitude="
                         + latlng.latitude
-                        +"Longtitude="
+                        +"&Longtitude="
                         + latlng.longitude,
                         WifiInfosAPI.class,
                 new Response.Listener<WifiInfosAPI>() {
@@ -358,8 +358,8 @@ public class MainActivity extends Activity implements BaiduMap.OnMarkerClickList
             if (location == null || mMapView == null) {
                 return;
             }
-            Log.e("longtitude", location.getLongitude() + "");
-            Log.e("latitude", location.getLatitude() + "");
+            //Log.e("longtitude", location.getLongitude() + "");
+            //Log.e("latitude", location.getLatitude() + "");
             MyLocationData locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
                             // 此处设置开发者获取到的方向信息，顺时针0-360
