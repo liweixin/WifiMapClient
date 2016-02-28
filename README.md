@@ -13,80 +13,91 @@
 ![详细wifi信息](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/small_3.jpg)
 
 ##使用的第三方类库
-BaiduMapSdk,Volley,Gson.
+BaiduMapSdk：地图接口
+Volley：网络处理
+Gson：解析Json
 
 ##serverIp
-暂定为202.120.36.190.
+202.120.36.190.
 
 ##port
-目前采用测试端口8090.
+目前为8080.
 
 ##相关API
 格式：http://serverIp:port/  <br>
 返回格式均为json，采用GET请求数据  <br>
 
 ####1.返回附近WIFI的位置信息
-* 地址：http://serverIp:port/getWifiLatLng  <br>
-* 示例：http://202.120.36.190:8090/getWifiLatLng  <br>
+* 地址：http://serverIp:port/wifiLatLng  <br>
+* 示例：http://202.120.36.190:8080/wifiLatLng  <br>
 ```
 {
-    "count": 5,
+    "count": 6,
     "location": [
         {
-            "latitude": 31.03002,
-            "longtitude": 121.443325
+            "latitude": 31.028267,
+            "longtitude": 121.444008
         },
         {
-            "latitude": 31.029881,
-            "longtitude": 121.44316
+            "latitude": 31.028342,
+            "longtitude": 121.444003
         },
         {
-            "latitude": 31.03042,
-            "longtitude": 121.443158
+            "latitude": 31.028406,a
+            "longtitude": 121.443999
         },
         {
-            "latitude": 31.031043,
-            "longtitude": 121.442968
+            "latitude": 31.032559,
+            "longtitude": 121.443299
         },
         {
-            "latitude": 31.030836,
-            "longtitude": 121.442402
+            "latitude": 31.030854,
+            "longtitude": 121.442549
+        },
+        {
+            "latitude": 31.030724,
+            "longtitude": 121.442398
         }
     ]
 }
 ```
 
 ####2.查询指定位置的Wifi信息
-* 地址：http://serverIp:port/getWifiInfos/Latitude=?Longtitude=?  <br>
-* ?处分别以需要查询的经纬度代替。  <br>
-* 示例：http://202.120.36.190:8090/getWifiInfos/Latitude=31.022508Longtitude=121.4353897  <br>
+* 地址：http://serverIp:port/wifiInfos?Latitude=num1&Longtitude=num2  <br>
+* num1和num2处分别以需要查询的经纬度代替。  <br>
+* 必须保证参数格式正确（服务器端还未加入参数错误的处理方法）。  <br>
+* 示例：http://202.120.36.190:8080/wifiInfos?Latitude=31.030854&Longtitude=121.442549  <br>
 ```
 {
     "count": 4,
     "wifiInfos": [
         {
-            "signals": 89,
-            "security": "[ESS]",
-            "ssid": "CMCC-WEB",
-            "bssid": "00:11:b5:25:00:32"
+            "signals": 83,
+            "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]",
+            "ssid": "D18420",
+            "bssid": "14:75:90:42:c1:c0",
+            "timeString": "2015-12-04 16:50:57"
         },
         {
-            "signals": 77,
-            "security": "[ESS]",
-            "ssid": "CMCC-WEB",
-            "bssid": "00:11:b5:25:14:40"
+            "signals": 75,
+            "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]",
+            "ssid": "d18-120",
+            "bssid": "a4:56:02:4b:a6:c7",
+            "timeString": "2015-12-04 16:50:47"
         },
         {
-            "signals": 89,
-            "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS]",
-            "ssid": "Doubi323",
-            "bssid": "9c:21:6a:14:28:d2"
+            "signals": 75,
+            "security": "[WPA-PSK-CCMP][ESS]",
+            "ssid": "connect the right man",
+            "bssid": "c8:3a:35:50:a5:e8",
+            "timeString": "2015-12-04 16:50:57"
         },
         {
-            "signals": 89,
-            "security": "[WPA2-PSK-CCMP][ESS]",
-            "ssid": "xskz",
-            "bssid": "e2:df:9a:96:45:a7"
+            "signals": 71,
+            "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]",
+            "ssid": "TP-LINK_6870",
+            "bssid": "ec:26:ca:26:68:70",
+            "timeString": "2015-12-04 16:50:47"
         }
     ]
 }
