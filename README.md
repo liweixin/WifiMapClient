@@ -13,9 +13,9 @@
 ![详细wifi信息](https://github.com/liweixin/WifiMapClient/raw/master/screenshot/small_3.jpg)
 
 ##使用的第三方类库
-BaiduMapSdk：地图接口
-Volley：网络处理
-Gson：解析Json
+*BaiduMapSdk：地图接口  <br>
+*Volley：网络处理  <br>
+*Gson：解析Json  <br>
 
 ##serverIp
 202.120.36.190.
@@ -109,12 +109,14 @@ Gson：解析Json
     "wifiInfos": []
 }
 ```
+##Debug必看
+*  程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
+申请地址：http://lbsyun.baidu.com/apiconsole/key  <br>
+可以在AndroidManifest.xml中的meta-data修改AK码  <br>
+*  SHA1码获取方法：略  <br>
+*  格式化Json很好用的网站： http://www.bejson.com/  <br>
 
 ##Hint
 *  server提供的两个API均不需要认证，所以不需要登陆，请求时也不需要携带cookie  <br>
 测试可以用chrome插件postman, 或者直接浏览器访问然后格式化json http://www.bejson.com/
-*  程序中使用了百度地图的SDK，之前的AK码会失效（sha1不同），所以调试时需重新申请AK码  <br>
-申请地址：http://lbsyun.baidu.com/apiconsole/key
-*  第二个API中添加了时间信息，还没更新示例
-*  目前只在小米2S上测试没有问题，如果在手机上测试时发现任何BUG欢迎直接在isuue中提交或和我联系
-*  Contact me at qq627632598 or email
+*  Contact me at 627632598@qq.com
