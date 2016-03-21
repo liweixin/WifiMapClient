@@ -1,6 +1,8 @@
-# WifiMapClient
+﻿# WifiMapClient
 ##Wifi地图
 用于展示用户附近的Wifi地点和详细信息
+
+
 
 ##平台
 *  android
